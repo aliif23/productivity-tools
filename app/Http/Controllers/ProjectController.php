@@ -31,6 +31,47 @@ class ProjectController extends Controller
         ->where('status','Done')
         ->value('Totals');
 
+        $ongoing = Project::select(DB::raw("COUNT(*) as ongoing"))
+        ->where('status','=','Ongoing')
+        ->value('ongoing');
+
+        $done = Project::select(DB::raw("COUNT(*) as done"))
+        ->where('status','=','Done')
+        ->value('done');
+
+        $doneweb = Project::select(DB::raw("COUNT(*) as doneweb"))
+        ->where('cat','Web Development')
+        ->where('status','Done')
+        ->value('doneweb');
+
+        $donevtour = Project::select(DB::raw("COUNT(*) as donevtour"))
+        ->where('cat','Virtual Tour Development')
+        ->where('status','Done')
+        ->value('donevtour');
+
+        $doneerp = Project::select(DB::raw("COUNT(*) as doneerp"))
+        ->where('cat','ERP Development')
+        ->where('status','Done')
+        ->value('doneerp');
+
+        $ongweb = Project::select(DB::raw("COUNT(*) as ongweb"))
+        ->where('cat','Web Development')
+        ->where('status','Ongoing')
+        ->value('ongweb');
+
+        $ongvtour = Project::select(DB::raw("COUNT(*) as ongvtour"))
+        ->where('cat','Virtual Tour Development')
+        ->where('status','Ongoing')
+        ->value('ongvtour');
+
+        $ongerp = Project::select(DB::raw("COUNT(*) as ongerp"))
+        ->where('cat','ERP Development')
+        ->where('status','Ongoing')
+        ->value('ongerp');
+
+        $projectearnings = Project::select(DB::raw("SUM(price) as Total"))
+            ->where('status','=','Done')
+            ->value('Total');
         
 
         // dd($developer);
@@ -39,7 +80,16 @@ class ProjectController extends Controller
 
         return view('project.projectindex',[
             "projects" => $projects,
-            "datas" => $datas
+            "datas" => $datas,
+            "ongoing" => $ongoing,
+            "ongweb" => $ongweb,
+            "ongvtour" => $ongvtour,
+            "ongerp" => $ongerp,
+            "done" => $done,
+            "doneweb" => $doneweb,
+            "donevtour" => $donevtour,
+            "doneerp" => $doneerp,
+            "projectearnings" => $projectearnings
         ]);
 
     }

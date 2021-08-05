@@ -5,16 +5,18 @@
     <h5 class="card-header">Staff's Data</h5>
     <div class="card-body">
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <h5 class="card-title">Manage Staff Data's</h5>
           <p class="card-text text-success">{{session('mssg')}}</p>
           <p class="card-text">You can manage Create, Update, Delete staff Data here.</p>
-          <p class="card-text">Total Staff : {{$totalstaff}}</p>
-          <p class="card-text">Total Project Manager : {{$totalpm}}</p>
-          <p class="card-text">Total Developer : {{$totaldev}}</p>
-          <p class="card-text">Total Designer : {{$totaldes}}</p>
+          <h5 class="card-text">Total Staff : {{$totalstaff}}</h5>
+          <ul>
+            <li class="card-text">Total Project Manager : {{$totalpm}}</li>
+            <li class="card-text">Total Developer : {{$totaldev}}</li>
+            <li class="card-text">Total Designer : {{$totaldes}}</li>
+          </ul>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
         </div>
       </div>

@@ -4,15 +4,33 @@
 <div class="card">
     <h5 class="card-header">Project's Data</h5>
     <div class="card-body">
-      <h5 class="card-title">Manage Project Data's</h5>
-      <p class="card-text text-success">{{session('mssg')}}</p>
-      <p class="card-text">You can manage Create, Update, Delete Project Data here.</p>
+        <div class="row mb-4">
+            <div class="col-12 col-lg-6">
+                <h5 class="card-title">Manage Project Data's</h5>
+                <p class="card-text text-success">{{session('mssg')}}</p>
+                <p class="card-text">You can manage Create, Update, Delete Project Data here.</p>
+                <h6>Ongoing Projects : {{$ongoing}} </h6>
+                <ul>
+                    <li>Web Development : {{$ongweb}}</li>
+                    <li>Virtual Tour Development : {{$ongvtour}}</li>
+                    <li>ERP Development : {{$ongerp}}</li>
+                </ul>
+                <h6>Completed Projects : {{$done}}</h6>
+                <ul>
+                    <li>Web Development : {{$doneweb}}</li>
+                    <li>Virtual Tour Development : {{$donevtour}}</li>
+                    <li>ERP Development : {{$doneerp}}</li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h5 class="text-center card-title">Project Earnings Chart</h5>
+                <p>Total Earnings : Rp. {{$projectearnings}}</p>
+                <canvas id="chartproject" style="width:100%;max-width:600px;height:100%"></canvas>
+            </div>
+        </div>
       <div class="float-end mb-4 mt-1">
         <a href="/" class="btn btn-primary">Back To Home</a>
         <a href="/project/createproject" class="btn btn-success">Add a new Project Data</a>
-      </div>
-      <div class="mb-4">
-        <canvas id="chartproject" style="width:60%;max-width:700px;height:50%"></canvas>
       </div>
       <table class="table table-bordered">
         <tr>
