@@ -103,14 +103,17 @@
             <div class="row mb-4">
               <div class="col-6 col-sm-3">
                 <h6>Monday Morning Tasks</h6>
-                <ul>
+                
                   @foreach($mondaymorningtasks as $mondaymorningtask)
-                  <li>{{$mondaymorningtask->title}}</li>
-                  <li>{{$mondaymorningtask->clock}}</li>
-                  <li>{{$mondaymorningtask->endclock}}</li>
-                  <li>{{$mondaymorningtask->urgency}}</li>
+                  <ul>
+                    <li>{{$mondaymorningtask->title}}</li>
+                    <li>{{$mondaymorningtask->clock}}</li>
+                    <li>{{$mondaymorningtask->endclock}}</li>
+                    <li>{{$mondaymorningtask->urgency}}</li>
+                    <a href="/task/donehome/{{$mondaymorningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+                  </ul>
                   @endforeach
-                </ul>
+                
               </div>
    
               <div class="col-6 col-sm-3">
@@ -121,6 +124,8 @@
                  <li>{{$mondayafternoontask->clock}}</li>
                  <li>{{$mondayafternoontask->endclock}}</li>
                  <li>{{$mondayafternoontask->urgency}}</li>
+                 <a href="/task/donehome/{{$mondayafternoontask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -133,6 +138,9 @@
                  <li>{{$mondayeveningtask->clock}}</li>
                  <li>{{$mondayeveningtask->endclock}}</li>
                  <li>{{$mondayeveningtask->urgency}}</li>
+                 <a href="/task/donehome/{{$mondayeveningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
+
                  @endforeach
                </ul>
              </div>
@@ -145,6 +153,8 @@
                  <li>{{$mondaynighttask->clock}}</li>
                  <li>{{$mondaynighttask->endclock}}</li>
                  <li>{{$mondaynighttask->urgency}}</li>
+                 <a href="/task/donehome/{{$mondaynighttask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -159,6 +169,8 @@
                  <li>{{$tuesdaymorningtask->clock}}</li>
                  <li>{{$tuesdaymorningtask->endclock}}</li>
                  <li>{{$tuesdaymorningtask->urgency}}</li>
+                  <a href="/task/donehome/{{$teusdaymorningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -171,6 +183,8 @@
                 <li>{{$tuesdayafternoontask->clock}}</li>
                 <li>{{$tuesdayafternoontask->endclock}}</li>
                 <li>{{$tuesdayafternoontask->urgency}}</li>
+                  <a href="/task/donehome/{{$tuesdayafternoontask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -183,6 +197,8 @@
                 <li>{{$tuesdayeveningtask->clock}}</li>
                 <li>{{$tuesdayeveningtask->endclock}}</li>
                 <li>{{$tuesdayeveningtask->urgency}}</li>
+                  <a href="/task/donehome/{{$tuesdayeveningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -195,6 +211,8 @@
                 <li>{{$tuesdaynighttask->clock}}</li>
                 <li>{{$tuesdaynighttask->endclock}}</li>
                 <li>{{$tuesdaynighttask->urgency}}</li>
+                  <a href="/task/donehome/{{$tuesdaynighttask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -209,6 +227,8 @@
                  <li>{{$wednesdaymorningtask->clock}}</li>
                  <li>{{$wednesdaymorningtask->endclock}}</li>
                  <li>{{$wednesdaymorningtask->urgency}}</li>
+                  <a href="/task/donehome/{{$wednesdaymorningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -221,6 +241,8 @@
                 <li>{{$wednesdayafternoontask->clock}}</li>
                 <li>{{$wednesdayafternoontask->endclock}}</li>
                 <li>{{$wednesdayafternoontask->urgency}}</li>
+                  <a href="/task/donehome/{{$wednesdayafternoontask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -233,6 +255,8 @@
                 <li>{{$wednesdayeveningtask->clock}}</li>
                 <li>{{$wednesdayeveningtask->endclock}}</li>
                 <li>{{$wednesdayeveningtask->urgency}}</li>
+                  <a href="/task/donehome/{{$wednesdayeveningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -245,6 +269,8 @@
                 <li>{{$wednesdaynighttask->clock}}</li>
                 <li>{{$wednesdaynighttask->endclock}}</li>
                 <li>{{$wednesdaynighttask->urgency}}</li>
+                  <a href="/task/donehome/{{$wednesdaynighttask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -259,6 +285,8 @@
                  <li>{{$thursdaymorningtask->clock}}</li>
                  <li>{{$thursdaymorningtask->endclock}}</li>
                  <li>{{$thursdaymorningtask->urgency}}</li>
+                  <a href="/task/donehome/{{$thursdaymorningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -271,6 +299,8 @@
                 <li>{{$thursdayafternoontask->clock}}</li>
                 <li>{{$thursdayafternoontask->endclock}}</li>
                 <li>{{$thursdayafternoontask->urgency}}</li>
+                  <a href="/task/donehome/{{$thursdayafternoontask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -283,6 +313,8 @@
                 <li>{{$thursdayeveningtask->clock}}</li>
                 <li>{{$thursdayeveningtask->endclock}}</li>
                 <li>{{$thursdayeveningtask->urgency}}</li>
+                  <a href="/task/donehome/{{$thursdayeveningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -295,6 +327,8 @@
                 <li>{{$thursdaynighttask->clock}}</li>
                 <li>{{$thursdaynighttask->endclock}}</li>
                 <li>{{$thursdaynighttask->urgency}}</li>
+                  <a href="/task/donehome/{{$thursdaynighttask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -309,6 +343,8 @@
                  <li>{{$fridaymorningtask->clock}}</li>
                  <li>{{$fridaymorningtask->endclock}}</li>
                  <li>{{$fridaymorningtask->urgency}}</li>
+                  <a href="/task/donehome/{{$fridaymorningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -321,7 +357,9 @@
                 <li>{{$fridayafternoontask->clock}}</li>
                 <li>{{$fridayafternoontask->endclock}}</li>
                 <li>{{$fridayafternoontask->urgency}}</li>
+                <a href="/task/donehome/{{$fridayafternoontask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
                 @endforeach
+
               </ul>
             </div>
    
@@ -333,6 +371,8 @@
                 <li>{{$fridayeveningtask->clock}}</li>
                 <li>{{$fridayeveningtask->endclock}}</li>
                 <li>{{$fridayeveningtask->urgency}}</li>
+                <a href="/task/donehome/{{$fridayeveningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -345,6 +385,8 @@
                 <li>{{$fridaynighttask->clock}}</li>
                 <li>{{$fridaynighttask->endclock}}</li>
                 <li>{{$fridaynighttask->urgency}}</li>
+                <a href="/task/donehome/{{$fridaynighttask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -359,6 +401,8 @@
                  <li>{{$saturdaymorningtask->clock}}</li>
                  <li>{{$saturdaymorningtask->endclock}}</li>
                  <li>{{$saturdaymorningtask->urgency}}</li>
+                <a href="/task/donehome/{{$saturdaymorningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -371,6 +415,8 @@
                 <li>{{$saturdayafternoontask->clock}}</li>
                 <li>{{$saturdayafternoontask->endclock}}</li>
                 <li>{{$saturdayafternoontask->urgency}}</li>
+                <a href="/task/donehome/{{$saturdayafternoontask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -383,6 +429,8 @@
                 <li>{{$saturdayeveningtask->clock}}</li>
                 <li>{{$saturdayeveningtask->endclock}}</li>
                 <li>{{$saturdayeveningtask->urgency}}</li>
+                <a href="/task/donehome/{{$saturdayeveningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -395,6 +443,8 @@
                 <li>{{$saturdaynighttask->clock}}</li>
                 <li>{{$saturdaynighttask->endclock}}</li>
                 <li>{{$saturdaynighttask->urgency}}</li>
+                <a href="/task/donehome/{{$saturdaynighttask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -409,6 +459,8 @@
                  <li>{{$sundaymorningtask->clock}}</li>
                  <li>{{$sundaymorningtask->endclock}}</li>
                  <li>{{$sundaymorningtask->urgency}}</li>
+                <a href="/task/donehome/{{$sundaymorningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                  @endforeach
                </ul>
              </div>
@@ -421,6 +473,8 @@
                 <li>{{$sundayafternoontask->clock}}</li>
                 <li>{{$sundayafternoontask->endclock}}</li>
                 <li>{{$sundayafternoontask->urgency}}</li>
+                <a href="/task/donehome/{{$sundayafternoontask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -433,6 +487,8 @@
                 <li>{{$sundayeveningtask->clock}}</li>
                 <li>{{$sundayeveningtask->endclock}}</li>
                 <li>{{$sundayeveningtask->urgency}}</li>
+                <a href="/task/donehome/{{$sundayeveningtask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>
@@ -445,6 +501,8 @@
                 <li>{{$sundaynighttask->clock}}</li>
                 <li>{{$sundaynighttask->endclock}}</li>
                 <li>{{$sundaynighttask->urgency}}</li>
+                <a href="/task/donehome/{{$sundaynighttask->id}}" class="btn btn-success mt-3 float-end btn-sm">Mark as Done</a>
+
                 @endforeach
               </ul>
             </div>

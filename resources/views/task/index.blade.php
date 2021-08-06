@@ -83,7 +83,10 @@
       title : {
         display: true,
         text: "This Week Tasks To-Do"
-      }
+      },
+    scales: {
+          yAxes: [{ticks: {min: 0, max:5}}],
+        }
     }
   });
 

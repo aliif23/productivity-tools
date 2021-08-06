@@ -187,6 +187,15 @@ class TaskController extends Controller
         return redirect('task/index')->with('mssg','Task Status set as Done');
     }
 
+    public function donestatushome($id){
+        $task = Task::findOrFail($id);
+        $task->status = "Done";
+
+        $task->update();
+
+        return redirect('/')->with('mssg','Task Status set as Done');
+    }
+
     public function newlog(){
         $log = new Log();
 

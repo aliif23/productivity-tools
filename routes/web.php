@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[DashboardController::class,'dashboard']);
 
+Route::get('task/donehome/{id}',[TaskController::class,'donestatushome']);
+
 // Staff 
 
     Route::get('/staff/index',[StaffController::class,'index']);
