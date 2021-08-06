@@ -17,16 +17,7 @@ class TaskController extends Controller
         $tasks = Task::paginate(5);
 
         date_default_timezone_set('Asia/Jakarta');
-
-        // $morningtime = Carbon::createFromTime(00,00,00);
-        // $morningend = Carbon::createFromTime(9,00,00);
-
-        // $morning = Task::all()
-        // ->where('clock','>',date('H:i:s'))
-        // ->where('endclock','<',date('H:i:s',strtotime('+24 hours')));
-        
-
-        // dd($morning);
+ 
         
         $tasksdone = Task::select(DB::raw("COUNT(*) AS tasksdone"))
         ->where("status","=","Done")
@@ -151,7 +142,7 @@ class TaskController extends Controller
             "tasksdone" => $tasksdone,
             "tasksdone1" => $tasksdone1,
             "tasksdone2" => $tasksdone2,
-            "tasksdone3" => $tasksdone3,
+            "tasksdone3" => $tasksdone3
         ]);
     }
 

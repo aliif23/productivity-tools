@@ -6,15 +6,19 @@
       Task Scheduler
     </div>
     <div class="card-body">
-      <h5 class="card-title">Task Scheduler Management App</h5>
-      <p class="card-text">In this app, you can manage your activities.</p>
-      <h5 class="card-text">Tasks Completed This Week : {{$tasksdone}}</h5>
-      <ul>
-        <li>Not-Urgent Tasks Done : {{$tasksdone1}}</li>
-        <li>Moderate Tasks Done : {{$tasksdone2}}</li>
-        <li>Urgent Tasks Done : {{$tasksdone3}}</li>
-      </ul>
-      <p class="text-success">{{session('mssg')}}</p>
+     <div class="row">
+       <div class="col-12">
+        <h5 class="card-title">Task Scheduler Management App</h5>
+        <p class="card-text">In this app, you can manage your activities.</p>
+        <h5 class="card-text">Tasks Completed This Week : {{$tasksdone}}</h5>
+        <ul>
+          <li>Not-Urgent Tasks Done : {{$tasksdone1}}</li>
+          <li>Moderate Tasks Done : {{$tasksdone2}}</li>
+          <li>Urgent Tasks Done : {{$tasksdone3}}</li>
+        </ul>
+        <p class="text-success">{{session('mssg')}}</p>
+       </div>
+     </div>
       <div class="row">
         <div class="col-12 col-lg-6">
           <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
@@ -56,7 +60,7 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <script>
-  var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
+  var days = ["Morning", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
   var barColors = ["red", "green","blue","orange","brown","purple","pink"];
   var weekdata = {{json_encode($weekdata)}};
 
