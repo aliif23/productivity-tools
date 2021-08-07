@@ -26,6 +26,33 @@
               <p>Project Earnings : Rp.  <?php echo ($projectearnings[0]) ?></p>
             </ul>
           </div>
+          <div class="col-10 my-4">
+            <div class="card text-center">
+              <div class="card-header">
+                Ongoing Projects : 
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-3">Currently Ongoing Projects : </h5>
+                <div class="row justify-content-center">
+                  @foreach($currongprojects as $currongproject)
+                    <div class="col-12 col-md-6 mb-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{$currongproject->name}}</h5>
+                          <p class="card-text">PIC : {{$currongproject->pic}}</p>
+                          <p class="card-text">Category : {{$currongproject->cat}}</p>
+                          <a href="/project/details/{{$currongproject->id}}" class="btn btn-primary">Project Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  @endforeach
+                </div>
+              </div>
+              <div class="card-footer text-muted">
+                Ongoing Projects
+              </div>
+            </div>
+          </div>
           <div class="col-5 col-sm-12 col-md-6">
               <h5 class="card-title">Manage Stratek Staffs</h5>
               <p class="card-text">Click here to Manage Stratek Staff from Project Manager, Engineer, and Designer</p>

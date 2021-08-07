@@ -310,6 +310,10 @@ class DashboardController extends Controller
         ->where('status','=',"Ongoing")
         ->where('day','=','Sunday'); 
 
+        $currongprojects = Project::all()
+        ->where('status','=','Ongoing');
+        
+
         
 
         
@@ -346,6 +350,7 @@ class DashboardController extends Controller
             "totaldev" => $totaldev,
             "totalpm" => $totalpm,
             "totaldes" =>$totaldes,
+            "currongprojects" => $currongprojects,
             "mondaymorningtasks" => $mondaymorningtasks,
             "mondayafternoontasks" => $mondayafternoontasks,
             "mondayeveningtasks" => $mondayeveningtasks,
