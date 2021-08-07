@@ -200,6 +200,8 @@ Route::get('task/donehome/{id}',[TaskController::class,'donestatushome']);
 
     Route::post('task/createtask',[TaskController::class,'createtask']);
 
+    Route::post('/createtask',[DashboardController::class,'createtask']);
+
     // CreateEnd
 
     // Details

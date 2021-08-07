@@ -377,4 +377,20 @@ class DashboardController extends Controller
                 
         ]);
     }
+
+    public function createtask(){
+        $task = new Task();
+
+        $task->title = request('title');
+        $task->clock = request('clock');
+        $task->day = request('day');
+        $task->details = request('details');
+        $task->urgency = request('urgency');
+        $task->cat = "task";
+        $task->endclock = request('endclock');
+
+        $task->save();
+
+        return redirect('/#task')->with('mssg','New Task Added');
+    }
 }

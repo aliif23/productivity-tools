@@ -97,9 +97,63 @@
       <div class="card-body">
         <h5 class="card-title">Task Scheduler</h5>
         <p class="card-text">I use this tool to schedule tasks, projects, and Important Meeting</p>
+        <p class="text-success">{{session('mssg')}}</p>
+        <div class="text-end">
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add new Task
+          </button>
+        </div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="/createtask" method="POST">
+                    @csrf
+                    <label for="title" class="form-label mt-2">Task Title</label>
+                    <input type="text" name="title" class="form-control">
+                    <label for="details" class="form-label mt-2">Task Overview</label>
+                    <input type="text" name="details" class="form-control">
+                    <label for="clock" class="form-label mt-2">Task Start Time :</label>
+                    <input type="time" name="clock" class="form-control">
+                    <label for="endclock" class="form-label mt-2">Task End Time :</label>
+                    <input type="time" name="endclock" class="form-control">
+                    <label for="day" class="mt-2 form-label">Day of Task : </label>
+                    <select name="day" id="day" class="form-control">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                    <label for="urgency" class="mt-2 form-label">Task Urgency : </label>
+                    <select name="urgency" id="urgency" class="form-control">
+                        <option value="Urgent">Urgent</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Not-Urgent">Not-Urgent</option>
+                    </select>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button submit" class="btn btn-success">Add Task</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          
+
+
+        </div>
         <div class="row">
           <div class="col-12">
-            <h5 class="text-center mb-5 mt-4">This Week Tasks</h5>
+            <h5 class="text-center mb-5 mt-4" id="task">This Week Tasks</h5>
             <div class="row mb-4">
               <div class="col-6 col-sm-3">
                 <h6>Monday Morning Tasks</h6>
@@ -844,7 +898,7 @@
    
           </div>
         </div>
-        <div class="float-end">
+        <div class="float-end" id="task">
           <a href="/task/index" class="btn btn-primary">Manage Tasks</a>
         </div>
 
@@ -855,6 +909,14 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+// $('p').css('color','red');
+
+</script>
+
 <script>
 var xValues = <?php echo json_encode($bulanke) ?>;
 

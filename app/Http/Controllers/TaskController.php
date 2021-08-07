@@ -193,7 +193,7 @@ class TaskController extends Controller
 
         $task->update();
 
-        return redirect('/')->with('mssg','Task Status set as Done');
+        return redirect('/#task')->with('mssg','Task Status set as Done');
     }
 
     public function newlog(){
