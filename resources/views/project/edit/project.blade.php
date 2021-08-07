@@ -31,7 +31,21 @@
                         @endforeach
                     </select>
                     <label for="cat" class="form-label mt-3" id="cat">Project Category : </label>
-                    <input type="text" class="form-control" id="cat" name="cat" required value="{{$project->cat}}">
+                    <select name="cat" id="" class="form-control">
+                        @if($project->cat == "Web Development")
+                        <option value="Web Development" selected>Web Development</option>
+                        <option value="Virtual Tour Development">Virtual Tour Development</option>
+                        <option value="ERP Development">ERP Development</option>
+                        @elseif($project->cat == "Virtual Tour Development")
+                        <option value="Web Development">Web Development</option>
+                        <option value="Virtual Tour Development" selected>Virtual Tour Development</option>
+                        <option value="ERP Development">ERP Development</option>
+                        @elseif($project->cat == "ERP Development")
+                        <option value="Web Development">Web Development</option>
+                        <option value="Virtual Tour Development">Virtual Tour Development</option>
+                        <option value="ERP Development" selected>ERP Development</option>
+                        @endif
+                      </select>
                     <label for="price" class="form-label mt-3" id="price">Projected Price : </label>
                     <input type="text" class="form-control" id="price" name="price" required value="{{$project->price}}">
                     <label for="eng" class="form-label mt-3" id="eng">Engineer : </label>

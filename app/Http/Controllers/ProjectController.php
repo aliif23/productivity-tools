@@ -119,6 +119,7 @@ class ProjectController extends Controller
         $project->desi = request('desi');
         $project->startdate = request('startdate');
         $project->enddate = request('enddate');
+        $project->status = "Ongoing";
 
         $project->save();
 

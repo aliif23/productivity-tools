@@ -41,7 +41,7 @@
                           <h5 class="card-title">{{$currongproject->name}}</h5>
                           <p class="card-text">PIC : {{$currongproject->pic}}</p>
                           <p class="card-text">Category : {{$currongproject->cat}}</p>
-                          <a href="/project/details/{{$currongproject->id}}" class="btn btn-primary">Project Details</a>
+                          <a href="/project/details/{{$currongproject->id}}" class="btn btn-primary">Details</a>
                         </div>
                       </div>
                     </div>
@@ -200,6 +200,7 @@
                           <li>{{$mondaymorningtask->urgency}}</li>
                           <div class="text-end">
                             <a href="/task/donehome/{{$mondaymorningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                            <a href="/task/details/{{$mondaymorningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                           </div>
                         </div>
                       </div>
@@ -226,6 +227,7 @@
                         <li>{{$mondayafternoontask->urgency}}</li>
                         <div class="text-end">
                           <a href="/task/donehome/{{$mondayafternoontask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                          <a href="/task/details/{{$mondayafternoontask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                         </div>
                       </div>
                     </div>
@@ -252,6 +254,7 @@
                         <li>{{$mondayeveningtask->urgency}}</li>
                         <div class="text-end">
                           <a href="/task/donehome/{{$mondayeveningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                          <a href="/task/details/{{$mondayeveningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                         </div>
                       </div>
                     </div>
@@ -278,6 +281,7 @@
                         <li>{{$mondaynighttask->urgency}}</li>
                         <div class="text-end">
                           <a href="/task/donehome/{{$mondaynighttask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                          <a href="/task/details/{{$mondaynighttask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                         </div>
                       </div>
                     </div>
@@ -306,6 +310,7 @@
                       <li>{{$tuesdaymorningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$tuesdaymorningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$tuesdaymorningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -332,6 +337,7 @@
                       <li>{{$tuesdayafternoontask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$tuesdayafternoontask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$tuesdayafternoontask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -358,6 +364,7 @@
                       <li>{{$tuesdayeveningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$tuesdayeveningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$tuesdayeveningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -384,6 +391,7 @@
                       <li>{{$tuesdaynighttask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$tuesdaynighttask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$tuesdaynighttask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -412,6 +420,7 @@
                       <li>{{$wednesdaymorningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$wednesdaymorningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$wednesdaymorningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -438,6 +447,7 @@
                       <li>{{$wednesdayafternoontask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$wednesdayafternoontask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$wednesdayafternoontask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -464,6 +474,7 @@
                       <li>{{$wednesdayeveningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$wednesdayeveningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$wednesdayeveningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -490,6 +501,7 @@
                       <li>{{$wednesdaynighttask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$wednesdaynighttask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$wednesdaynighttask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -518,6 +530,7 @@
                       <li>{{$thursdaymorningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$thursdaymorningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$thursdaymorningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -544,6 +557,7 @@
                       <li>{{$thursdayafternoontask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$thursdayafternoontask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$thursdayafternoontask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -570,6 +584,7 @@
                       <li>{{$thursdayeveningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$thursdayeveningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$thursdayeveningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -596,6 +611,7 @@
                       <li>{{$thursdaynighttask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$thursdaynighttask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$thursdaynighttask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -624,6 +640,7 @@
                       <li>{{$fridaymorningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$fridaymorningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$fridaymorningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -650,6 +667,7 @@
                       <li>{{$fridayafternoontask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$fridayafternoontask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$fridayafternoontask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -676,6 +694,7 @@
                       <li>{{$fridayeveningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$fridayeveningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$fridayeveningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -702,6 +721,7 @@
                       <li>{{$fridaynighttask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$fridaynighttask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$fridaynighttask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -730,6 +750,7 @@
                       <li>{{$saturdaymorningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$saturdaymorningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$saturdaymorningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -756,6 +777,7 @@
                       <li>{{$saturdayafternoontask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$saturdayafternoontask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$saturdayafternoontask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -782,6 +804,7 @@
                       <li>{{$saturdayeveningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$saturdayeveningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$saturdayeveningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -809,6 +832,7 @@
                       <div class="text-end">
                         <a href="/task/donehome/{{$saturdaynighttask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
                       </div>
+                      <a href="/task/details/{{$saturdaynighttask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                     </div>
                   </div>
                 </div>
@@ -836,6 +860,7 @@
                       <li>{{$sundaymorningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$sundaymorningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$sundaymorningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -862,6 +887,7 @@
                       <li>{{$sundayafternoontask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$sundayafternoontask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$sundayafternoontask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -888,6 +914,7 @@
                       <li>{{$sundayeveningtask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$sundayeveningtask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$sundayeveningtask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>
@@ -914,6 +941,7 @@
                       <li>{{$sundaynighttask->urgency}}</li>
                       <div class="text-end">
                         <a href="/task/donehome/{{$sundaynighttask->id}}" class="btn btn-success mt-3 btn-sm">Mark as Done</a>
+                        <a href="/task/details/{{$sundaynighttask->id}}" class="btn btn-primary mt-3 btn-sm">Details</a>
                       </div>
                     </div>
                   </div>

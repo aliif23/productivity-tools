@@ -27,16 +27,17 @@
                         @endforeach
                     </select>
                     <label for="cat" class="form-label mt-3" id="cat">Project Category : </label>
-                    <input type="text" class="form-control" id="cat" name="cat" required>
+                    <select name="cat" id="" class="form-control">
+                      <option value="Web Development">Web Development</option>
+                      <option value="Virtual Tour Development">Virtual Tour Development</option>
+                      <option value="ERP Development">ERP Development</option>
+                    </select>
                     <label for="price" class="form-label mt-3" id="price">Projected Price : </label>
                     <input type="text" class="form-control" id="price" name="price" required>
                     <label for="eng" class="form-label mt-3" id="eng">Engineer : </label>
                     <select name="eng" id="role" class="form-control">
-                        @foreach($developers as $developer)
-                          @if($staff->role == "Full Stack Web Developer" || $staff->role == "Front End Developer" ||  $staff->role == "Back End Developer" || $staff->role == "Game Developer" )
-                            
+                        @foreach($developers as $developer)  
                           <option value="{{$developer}}">{{$developer}}</option>
-                          @endif
                         @endforeach
                     </select>
                     <label for="desi" class="form-label mt-3" id="desi">UI/UX Designer : </label>
