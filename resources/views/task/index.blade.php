@@ -60,7 +60,7 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <script>
-  var days = ["Morning", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
+  var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
   var barColors = ["red", "green","blue","orange","brown","purple","pink"];
   var weekdata = {{json_encode($weekdata)}};
 
