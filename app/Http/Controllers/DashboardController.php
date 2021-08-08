@@ -312,8 +312,12 @@ class DashboardController extends Controller
 
         $currongprojects = Project::all()
         ->where('status','=','Ongoing');
-        
 
+        $staffs = Staff::all();
+        
+        $developers = Staff::select('name AS name')
+        ->where('role','LIKE','%Dev%')
+        ->pluck('name');
         
 
         
@@ -379,6 +383,8 @@ class DashboardController extends Controller
             "sundayafternoontasks" => $sundayafternoontasks,
             "sundayeveningtasks" => $sundayeveningtasks,
             "sundaynighttasks" => $sundaynighttasks,
+            "staffs" => $staffs,
+            "developers" => $developers
                 
         ]);
     }
@@ -397,5 +403,23 @@ class DashboardController extends Controller
         $task->save();
 
         return redirect('/#task')->with('mssg','New Task Added');
+    }
+
+    public function createproject(){
+        $project = new Project();
+
+        $project->name = request('name');
+        $project->pic = request('pic');
+        $project->cat = request('cat');
+        $project->price = request('price');
+        $project->eng = request('eng');
+        $project->desi = request('desi');
+        $project->startdate = request('startdate');
+        $project->enddate = request('enddate');
+        $project->status = "Ongoing";
+
+        $project->save();
+
+        return redirect('/')->with('mssg','New Project Added');
     }
 }

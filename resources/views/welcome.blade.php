@@ -58,10 +58,72 @@
               <p class="card-text">Click here to Manage Stratek Staff from Project Manager, Engineer, and Designer</p>
               <a href="/staff/index" class="btn btn-primary">Manage Staffs</a>
             </div>
-            <div class="col-5 text-end col-sm-12 col-md-6">
-              <h5 class="card-title">Manage Stratek Projects</h5>
-              <p class="card-text">Click here to Manage Stratek Projects, add Project Logs, Track Events,etc</p>
-              <a href="/project/index" class="btn btn-primary">Manage Projects</a>
+            <div class="col-5 col-sm-12 col-md-6">
+              <h5 class="card-title text-end">Manage Stratek Projects</h5>
+              <p class="card-text text-end">Click here to Manage Stratek Projects, add Project Logs, Track Events,etc</p>
+              <p class="text-end text-success">{{session('mssg')}}</p>
+              <div class="text-end">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                  Add new Project
+                </button>
+                <a href="/project/index" class="btn btn-primary">Manage Projects</a>
+              </div>
+              <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel1">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/newprojecthome" method="POST">
+                      @csrf
+                      <label for="name" class="form-label" id="name">Project Name : </label>
+                      <input type="text" class="form-control" id="name" name="name" required>
+                      <label for="pic" class="form-label mt-3" id="pic">PIC : </label>
+                      <select name="pic" id="role" class="form-control">
+                          @foreach($staffs as $staff)
+                              @if($staff->role == "Project Manager")
+                              <option value="{{$staff->name}}">{{$staff->name}}</option>
+                              @endif
+                          @endforeach
+                      </select>
+                      <label for="cat" class="form-label mt-3" id="cat">Project Category : </label>
+                      <select name="cat" id="" class="form-control">
+                        <option value="Web Development">Web Development</option>
+                        <option value="Virtual Tour Development">Virtual Tour Development</option>
+                        <option value="ERP Development">ERP Development</option>
+                      </select>
+                      <label for="price" class="form-label mt-3" id="price">Projected Price : </label>
+                      <input type="text" class="form-control" id="price" name="price" required>
+                      <label for="eng" class="form-label mt-3" id="eng">Engineer : </label>
+                      <select name="eng" id="role" class="form-control">
+                          @foreach($developers as $developer)  
+                            <option value="{{$developer}}">{{$developer}}</option>
+                          @endforeach
+                      </select>
+                      <label for="desi" class="form-label mt-3" id="desi">UI/UX Designer : </label>
+                      <select name="desi" id="role" class="form-control">
+                          @foreach($staffs as $staff)
+                              @if($staff->role == "UI/UX Designer")
+                              <option value="{{$staff->name}}">{{$staff->name}}</option>
+                              @endif
+                          @endforeach
+                      </select>
+                      <label for="startdate" class="form-label mt-3">Start Date :</label>
+                      <input type="date" name="startdate" class="form-control">
+                      <label for="enddate" class="form-label mt-3">End Date :</label>
+                      <input type="date" name="enddate" class="form-control">
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-success">Add Project</button>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
       </div>

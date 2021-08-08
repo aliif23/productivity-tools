@@ -23,6 +23,7 @@ Route::get('/',[DashboardController::class,'dashboard']);
 
 Route::get('task/donehome/{id}',[TaskController::class,'donestatushome']);
 
+Route::post('/newprojecthome',[DashboardController::class,'createproject']);
 // Staff 
 
     Route::get('/staff/index',[StaffController::class,'index']);
