@@ -88,224 +88,224 @@ class DashboardController extends Controller
 
         $mondaymorningtasks = Task::all()
         ->where('endclock','>=','00:00')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','09:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Monday');
 
         $mondayafternoontasks = Task::all()
         ->where('endclock','>=','09:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','15:30')
         ->where('status','=',"Ongoing")
         ->where('day','=','Monday');
 
         $mondayeveningtasks = Task::all()
         ->where('endclock','>=','15:31')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','20:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Monday');
 
         $mondaynighttasks = Task::all()
         ->where('endclock','>=','20:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','23:59')
         ->where('status','=',"Ongoing")
         ->where('day','=','Monday');
         
         $tuesdaymorningtasks = Task::all()
         ->where('endclock','>=','00:00')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','09:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Tuesday');
 
         $tuesdayafternoontasks = Task::all()
         ->where('endclock','>=','09:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','15:30')
         ->where('status','=',"Ongoing")
         ->where('day','=','Tuesday');
 
         $tuesdayeveningtasks = Task::all()
         ->where('endclock','>=','15:31')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','20:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Tuesday');
 
         $tuesdaynighttasks = Task::all()
         ->where('endclock','>=','20:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','23:59')
         ->where('status','=',"Ongoing")
         ->where('day','=','Tuesday');  
 
         $wednesdaymorningtasks = Task::all()
         ->where('endclock','>=','00:00')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','09:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Wednesday');
 
         $wednesdayafternoontasks = Task::all()
         ->where('endclock','>=','09:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','15:30')
         ->where('status','=',"Ongoing")
         ->where('day','=','Wednesday');
 
         $wednesdayeveningtasks = Task::all()
         ->where('endclock','>=','15:31')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','20:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Wednesday');
 
         $wednesdaynighttasks = Task::all()
         ->where('endclock','>=','20:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','23:59')
         ->where('status','=',"Ongoing")
         ->where('day','=','Wednesday');  
 
         $thursdaymorningtasks = Task::all()
         ->where('endclock','>=','00:00')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','09:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Thursday');
 
         $thursdayafternoontasks = Task::all()
         ->where('endclock','>=','09:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','15:30')
         ->where('status','=',"Ongoing")
         ->where('day','=','Thursday');
 
         $thursdayeveningtasks = Task::all()
         ->where('endclock','>=','15:31')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','20:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Thursday');
 
         $thursdaynighttasks = Task::all()
         ->where('endclock','>=','20:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','23:59')
         ->where('status','=',"Ongoing")
         ->where('day','=','Thursday');  
 
         $fridaymorningtasks = Task::all()
         ->where('endclock','>=','00:00')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','09:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Friday');
 
         $fridayafternoontasks = Task::all()
         ->where('endclock','>=','09:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','15:30')
         ->where('status','=',"Ongoing")
         ->where('day','=','Friday');
 
         $fridayeveningtasks = Task::all()
         ->where('endclock','>=','15:31')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','20:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Friday');
 
         $fridaynighttasks = Task::all()
         ->where('endclock','>=','20:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','23:59')
         ->where('status','=',"Ongoing")
         ->where('day','=','Friday');  
 
         $saturdaymorningtasks = Task::all()
         ->where('endclock','>=','00:00')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','09:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Saturday');
 
         $saturdayafternoontasks = Task::all()
         ->where('endclock','>=','09:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','15:30')
         ->where('status','=',"Ongoing")
         ->where('day','=','Saturday');
 
         $saturdayeveningtasks = Task::all()
         ->where('endclock','>=','15:31')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','20:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Saturday');
 
         $saturdaynighttasks = Task::all()
         ->where('endclock','>=','20:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','23:59')
         ->where('status','=',"Ongoing")
         ->where('day','=','Saturday');  
 
         $sundaymorningtasks = Task::all()
         ->where('endclock','>=','00:00')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','09:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Sunday');
 
         $sundayafternoontasks = Task::all()
         ->where('endclock','>=','09:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','15:30')
         ->where('status','=',"Ongoing")
         ->where('day','=','Sunday');
 
         $sundayeveningtasks = Task::all()
         ->where('endclock','>=','15:31')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','20:00')
         ->where('status','=',"Ongoing")
         ->where('day','=','Sunday');
 
         $sundaynighttasks = Task::all()
         ->where('endclock','>=','20:01')
-        ->where('created_at', '>', now()->startOfWeek())
-        ->where('created_at', '<', now()->endOfWeek())
+        // ->where('created_at', '>', now()->startOfWeek())
+        // ->where('created_at', '<', now()->endOfWeek())
         ->where('endclock','<=','23:59')
         ->where('status','=',"Ongoing")
         ->where('day','=','Sunday'); 
